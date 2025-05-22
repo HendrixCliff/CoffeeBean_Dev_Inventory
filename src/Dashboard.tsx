@@ -73,7 +73,7 @@ const handleLogout = () => {
      <section className="">
       <Link className="fixed top-[9em] left-[-4em] max-[600px]:left-[-13.5em] z-[999] " to="filter"><img className="w-[8%]" src="./images/audit.png"/></Link>
       {user && (
-        <button className="fixed w-[8%] bg-[#ffffff] border-[#ffffff] border right-[1em]" onClick={handleLogout}><img className="w-[3em]" src="./images/user-logout.png"/></button>
+        <button className="fixed w-[8%] bg-[#ffffff] border-[#ffffff] border max-[600px]:right-[1.4em] right-[1em]" onClick={handleLogout}><img className="w-[3em]" src="./images/user-logout.png"/></button>
       )}
     </section>
       </section>
