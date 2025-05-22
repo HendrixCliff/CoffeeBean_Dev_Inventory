@@ -44,7 +44,11 @@ export const fetchItems = createAsyncThunk<Item[], void, { rejectValue: string }
   'items/fetchItems',
   async (_, thunkAPI) => {
     try {
-      const res = await axios.get(`https://coffeebean-inventory-backend.onrender.com/api/v1/items/`);
+      const res = await axios.get(`https://coffeebean-inventory-backend.onrender.com/api/v1/items/`,
+        {
+         withCredentials: true
+      }
+      );
       return res.data.data as Item[];
     } catch (err: any) {
       return thunkAPI.rejectWithValue(err.response?.data?.message || 'Failed to fetch items');
@@ -78,7 +82,13 @@ export const consumeItem = createAsyncThunk<Item, { id: string; amountUsed: numb
   'items/consumeItem',
   async ({ id, amountUsed }, thunkAPI) => {
     try {
-      const res = await axios.patch(`https://coffeebean-inventory-backend.onrender.com/api/v1/items/${id}/consume`, { amountUsed });
+      const res = await axios.patch(
+        `https://coffeebean-inventory-backend.onrender.com/api/v1/items/${id}/consume`,
+        { amountUsed },
+        {
+          withCredentials: true, // ✅ Critical
+        }
+      );
       return res.data.data as Item;
     } catch (err: any) {
       return thunkAPI.rejectWithValue(err.response?.data?.message || 'Failed to consume item');
@@ -91,7 +101,12 @@ export const deleteItem = createAsyncThunk<string, string, { rejectValue: string
   'items/deleteItem',
   async (id, thunkAPI) => {
     try {
-      await axios.delete(`https://coffeebean-inventory-backend.onrender.com/api/v1/items/${id}`);
+      await axios.delete(
+        `https://coffeebean-inventory-backend.onrender.com/api/v1/items/${id}`,
+        {
+          withCredentials: true, // ✅ Critical
+        }
+      );
       return id;
     } catch (err: any) {
       return thunkAPI.rejectWithValue(err.response?.data?.message || 'Failed to delete item');
