@@ -28,7 +28,9 @@ const ResetPassword: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <section className="relative overflow-hidden w-[100%]">
+      <img className="w-[100%] h-[24em] px-[2em] absolute top-[-.01em] left-[-1.9em]" src="./images/Reset_Password.webp"/>
+       <section className="flex items-center justify-center min-h-screen bg-gray-100">
         <section className="relative">
            <Link className="absolute max-[600px]:top-[-2.4em] max-[600px]:left-[-2em] left-[1em]" to="/"><GiExitDoor size={36} color={'#ff6e5a'} className="" /></Link>
         </section>
@@ -47,7 +49,7 @@ const ResetPassword: React.FC = () => {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter new password"
               required
-              className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-2 w-[65%] max-[600px]:w-[100%] mx-[auto] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -62,7 +64,7 @@ const ResetPassword: React.FC = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Confirm your password"
               required
-              className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-2 w-[65%] max-[600px]:w-[100%] mx-[auto] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -82,7 +84,9 @@ const ResetPassword: React.FC = () => {
           <p className="mt-4 text-green-500 text-center">{message}</p>
         )}
       </div>
-    </div>
+    </section>
+    </section>
+   
   );
 };
 

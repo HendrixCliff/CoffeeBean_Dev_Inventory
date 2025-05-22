@@ -58,10 +58,16 @@ const handleLogout = () => {
     <section className="justify-between">
       <section className=" relative">
       {!user && (
-        <>
-          <Link className=" absolute right-[-3em] top-[.3em]" to="signup"><img className="w-[13.5%] " src="./images/login.png"/></Link>
-          <Link className="absolute right-[-10em] " to="login"><img className="w-[16%]" src="./images/sign-up.png"/></Link>
-        </>
+        <section>
+        <section className="flex justify-end items-center w-full max-[600px]:gap-[1em] gap-[3em] pr-4">
+  <Link to="login" className="inline-block">
+    <img className="w-[70px] max-[600px]:w-[60px]" src="./images/login.png" alt="Login" />
+  </Link>
+  <Link to="signup" className="inline-block">
+    <img className="w-[90px] max-[600px]:w-[70px]" src="./images/sign-up.png" alt="Sign Up" />
+  </Link>
+</section>
+        </section>
       )}
     </section>
      <section className="">

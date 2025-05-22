@@ -18,11 +18,13 @@ const ForgotPassword: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <section className="relative">
+      <img className="w-[100%] h-[24em] px-[2em] absolute top-[-2.4em] left-[-1.9em]" src="./images/Forgot_Password.webp"/>
+          <section className="flex items-center justify-center min-h-screen bg-gray-100">
         <section className="relative">
-           <Link className="absolute max-[600px]:top-[-2.4em] max-[600px]:left-[-2em] left-[1em]" to="/"><GiExitDoor size={36} color={'#ff6e5a'} className="" /></Link>
+           <Link className="absolute max-[600px]:top-[-2.4em] bottom-[-7em] max-[600px]:left-[-2em] left-[1em]" to="/"><GiExitDoor size={36} color={'#ff6e5a'} className="" /></Link>
          </section>
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <section className="bg-white mt-[15em] p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-semibold mb-6 text-center">Forgot Password</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -37,13 +39,13 @@ const ForgotPassword: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your registered email"
               required
-              className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-2 w-[65%] max-[600px]:w-[100%] mx-[auto] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
           <button
             type="submit"
-            className={`w-full py-2 mt-4 rounded-md text-white font-medium ${
+            className={`w-[40%] bg-[#ff9a25] max-[600px]:w-[20%] mx-[auto] py-2 mt-[1em] rounded-md text-white font-medium ${
               isLoading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
             }`}
             disabled={isLoading}
@@ -58,8 +60,10 @@ const ForgotPassword: React.FC = () => {
         {typeof message === "string" && (
           <p className="mt-4 text-green-500 text-center">{message}</p>
         )}
-      </div>
-    </div>
+      </section>
+    </section>
+    </section>
+
   );
 };
 
