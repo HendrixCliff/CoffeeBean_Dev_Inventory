@@ -63,7 +63,7 @@ export const fetchFilteredItems =createAsyncThunk<
     if (filters.maxUsed !== undefined) params.append('maxUsed', filters.maxUsed.toString());
     if (filters.action) params.append('action', filters.action);
 
-    const response = await axios.get(`http://localhost:9000/api/v1/items/filter`, { params });
+    const response = await axios.get(`https://coffeebean-inventory-backend.onrender.com/api/v1/items/filter`, { params });
     return response.data.data as Item[];
   } catch (err: any) {
     return thunkAPI.rejectWithValue(err.response?.data?.message || 'Failed to fetch filtered items');

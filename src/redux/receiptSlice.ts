@@ -48,7 +48,7 @@ export const uploadReceipt = createAsyncThunk<
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
     };
-    const response = await axios.post<UploadReceiptResponse>('http://localhost:9000/api/v1/items/upload-receipt', formData, config);
+    const response = await axios.post<UploadReceiptResponse>('https://coffeebean-inventory-backend.onrender.com/api/v1/items/upload-receipt', formData, config);
     return response.data;
   } catch (err: any) {
     return rejectWithValue(err.response?.data?.message || 'Upload failed');
@@ -71,7 +71,7 @@ export const fetchReceipts = createAsyncThunk<
       message: string;
       count: number;
       receipts: Receipt[];
-    }>('http://localhost:9000/api/v1/items/get-receipt', config);
+    }>('https://coffeebean-inventory-backend.onrender.com/api/v1/items/get-receipt', config);
     return response.data.receipts;
   } catch (err: any) {
     return rejectWithValue(err.response?.data?.message || 'Failed to fetch receipts');

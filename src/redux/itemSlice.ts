@@ -44,7 +44,7 @@ export const fetchItems = createAsyncThunk<Item[], void, { rejectValue: string }
   'items/fetchItems',
   async (_, thunkAPI) => {
     try {
-      const res = await axios.get(`http://localhost:9000/api/v1/items/`);
+      const res = await axios.get(`https://coffeebean-inventory-backend.onrender.com/api/v1/items/`);
       return res.data.data as Item[];
     } catch (err: any) {
       return thunkAPI.rejectWithValue(err.response?.data?.message || 'Failed to fetch items');
@@ -58,7 +58,7 @@ export const addItem = createAsyncThunk<Item, FormData, { rejectValue: string }>
   'items/addItem',
   async (itemData, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:9000/api/v1/items/', itemData, {
+      const response = await axios.post('https://coffeebean-inventory-backend.onrender.com/api/v1/items/', itemData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -78,7 +78,7 @@ export const consumeItem = createAsyncThunk<Item, { id: string; amountUsed: numb
   'items/consumeItem',
   async ({ id, amountUsed }, thunkAPI) => {
     try {
-      const res = await axios.patch(`http://localhost:9000/api/v1/items/${id}/consume`, { amountUsed });
+      const res = await axios.patch(`https://coffeebean-inventory-backend.onrender.com/api/v1/items/${id}/consume`, { amountUsed });
       return res.data.data as Item;
     } catch (err: any) {
       return thunkAPI.rejectWithValue(err.response?.data?.message || 'Failed to consume item');
@@ -91,7 +91,7 @@ export const deleteItem = createAsyncThunk<string, string, { rejectValue: string
   'items/deleteItem',
   async (id, thunkAPI) => {
     try {
-      await axios.delete(`http://localhost:9000/api/v1/items/${id}`);
+      await axios.delete(`https://coffeebean-inventory-backend.onrender.com/api/v1/items/${id}`);
       return id;
     } catch (err: any) {
       return thunkAPI.rejectWithValue(err.response?.data?.message || 'Failed to delete item');

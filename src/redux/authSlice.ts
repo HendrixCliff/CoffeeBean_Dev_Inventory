@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_URL = "http://localhost:9000/api/v1/auth";
+const API_URL = "https://coffeebean-inventory-backend.onrender.com";
 
 interface User {
   _id: string;

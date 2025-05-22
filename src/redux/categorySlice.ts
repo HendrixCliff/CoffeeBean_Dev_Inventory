@@ -7,7 +7,7 @@ export const fetchCategories = createAsyncThunk<string[], void, { rejectValue: s
   'categories/fetch',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get(`http://localhost:9000/api/v1/items/categories`);
+      const response = await axios.get(`https://coffeebean-inventory-backend.onrender.com/api/v1/items/categories`);
       return response.data.data; // assuming array of strings like ["books", "electronics"]
     } catch (err: any) {
       return thunkAPI.rejectWithValue(err.response?.data?.message || 'Failed to fetch categories');
