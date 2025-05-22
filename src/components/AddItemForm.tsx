@@ -128,7 +128,7 @@ const AddItemForm: React.FC = () => {
         )}
       </div>
 
-      <button className="w-[5%] border max-[600px]:w-[13%] bg-[#ffffff]" type="submit"><img className="w-[3em]" src="./images/plus.png"/></button>
+      <button className="w-[5%] border-[#ffffff]  border max-[600px]:w-[13%] bg-[#ffffff]" type="submit"><img className="w-[3em]" src="./images/plus.png"/></button>
     </form>
   );
 };
