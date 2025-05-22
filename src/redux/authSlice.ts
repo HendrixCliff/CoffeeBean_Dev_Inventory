@@ -38,7 +38,7 @@ export const signup = createAsyncThunk<
   "auth/signup",
   async ({ name, email, password, confirmPassword }, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${API_URL}/signup`, {
+      const response = await axios.post(`${API_URL}/api/v1/signup`, {
         name,
         email,
         password,
@@ -60,7 +60,7 @@ export const login = createAsyncThunk<
   "auth/login",
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${API_URL}/login`, { email, password });
+      const response = await axios.post(`${API_URL}/api/v1/login`, { email, password });
       return response.data;
     } catch (err: any) {
       return rejectWithValue(err.response.data);
@@ -77,7 +77,7 @@ export const forgotPassword = createAsyncThunk<
   "auth/forgotPassword",
   async ({ email }, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${API_URL}/forgotPassword`, { email });
+      const response = await axios.post(`${API_URL}/api/v1/forgotPassword`, { email });
       return response.data;
     } catch (err: any) {
       return rejectWithValue(err.response.data);
@@ -94,7 +94,7 @@ export const resetPassword = createAsyncThunk<
   "auth/resetPassword",
   async ({ token, password, confirmPassword }, { rejectWithValue }) => {
     try {
-      const response = await axios.patch(`${API_URL}/resetPassword/${token}`, {
+      const response = await axios.patch(`${API_URL}/api/v1/resetPassword/${token}`, {
         password,
         confirmPassword,
       });
