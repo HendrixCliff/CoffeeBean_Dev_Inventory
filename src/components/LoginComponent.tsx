@@ -29,7 +29,7 @@ const Login: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
          <section className="relative">
-            <Link className="absolute max-[600px]:top-[-2.4em] max-[600px]:left-[-2em] left-[1em]" to="/"><GiExitDoor size={36} color={'#ff6e5a'} className="" /></Link>
+            <Link className="absolute max-[600px]:top-[-2.4em] top-[-1em] max-[600px]:left-[-2em] left-[1em]" to="/"><GiExitDoor size={36} color={'#ff6e5a'} className="" /></Link>
           </section>
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-semibold mb-6 text-center text-blue-600">Login</h2>

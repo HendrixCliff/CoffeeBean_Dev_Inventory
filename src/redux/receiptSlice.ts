@@ -44,16 +44,21 @@ export const uploadReceipt = createAsyncThunk<
   try {
     const config = {
       headers: {
-        'Content-Type': 'multipart/form-data',
-        Authorization: `Bearer ${localStorage.getItem('token')}`
-      }
+        'Content-Type': 'multipart/form-data'
+      },
+      withCredentials: true // ✅ THIS sends the session cookie
     };
-    const response = await axios.post<UploadReceiptResponse>('https://coffeebean-inventory-backend.onrender.com/api/v1/items/upload-receipt', formData, config);
+    const response = await axios.post<UploadReceiptResponse>(
+      'https://coffeebean-inventory-backend.onrender.com/api/v1/items/upload-receipt',
+      formData,
+      config
+    );
     return response.data;
   } catch (err: any) {
     return rejectWithValue(err.response?.data?.message || 'Upload failed');
   }
 });
+
 
 // === Thunk: Fetch All Receipts ===
 export const fetchReceipts = createAsyncThunk<
@@ -62,16 +67,14 @@ export const fetchReceipts = createAsyncThunk<
   { rejectValue: string }
 >('receipts/fetchAll', async (_, { rejectWithValue }) => {
   try {
-    const config = {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`
-      }
-    };
     const response = await axios.get<{
       message: string;
       count: number;
       receipts: Receipt[];
-    }>('https://coffeebean-inventory-backend.onrender.com/api/v1/items/get-receipt', config);
+    }>(
+      'https://coffeebean-inventory-backend.onrender.com/api/v1/items/get-receipt',
+      { withCredentials: true } // ✅ required
+    );
     return response.data.receipts;
   } catch (err: any) {
     return rejectWithValue(err.response?.data?.message || 'Failed to fetch receipts');
