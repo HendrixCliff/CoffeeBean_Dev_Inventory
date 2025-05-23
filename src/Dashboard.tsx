@@ -77,12 +77,12 @@ const handleLogout = () => {
       )}
     </section>
       </section>
-   <section className="fixed top-[10em] left-0 z-[999] flex flex-col gap-4 p-0 m-0">
-  <Link to="filter" className="m-0 p-0">
-    <img className="w-[40px] max-[600px]:w-[35px] m-0 p-0" src="./images/audit.png" alt="Audit" />
+ <section className="fixed top-[10em] left-0 z-[999] flex flex-col gap-4 p-0 m-0 max-[600px]:-translate-x-[4px] transform">
+  <Link to="filter" className="m-0 p-0 block">
+    <img className="w-[40px] max-[600px]:w-[35px] m-0 p-0 block" src="./images/audit.png" alt="Audit" />
   </Link>
-  <Link to="upload-receipt" className="m-0 p-0">
-    <img className="w-[40px] max-[600px]:w-[35px] m-0 p-0" src="./images/receipt.png" alt="Upload Receipt" />
+  <Link to="upload-receipt" className="m-0 p-0 block">
+    <img className="w-[40px] max-[600px]:w-[35px] m-0 p-0 block" src="./images/receipt.png" alt="Upload Receipt" />
   </Link>
 </section>
 
