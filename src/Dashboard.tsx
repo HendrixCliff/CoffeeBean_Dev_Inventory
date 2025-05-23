@@ -77,7 +77,7 @@ const handleLogout = () => {
       )}
     </section>
       </section>
-    <section className="fixed top-[10em] left-0 z-[999] flex flex-col gap-4 pl-2">
+    <section className="fixed top-[10em] max-[600px]:ml-[0.5em] left-0 z-[999] flex flex-col gap-4 pl-2">
   <Link to="filter">
     <img className="w-[50px] hover:scale-105 transition-transform" src="./images/audit.png" alt="Audit" />
   </Link>
