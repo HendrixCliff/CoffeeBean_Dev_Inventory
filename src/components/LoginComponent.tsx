@@ -27,8 +27,8 @@ const Login: React.FC = () => {
   }, [user, navigate]);
 
   return (
-    <section className="relative overflow-hidden w-[100%]">
-      <img className="w-[100%] h-[18em] px-[2em] absolute top-[-2em] left-[-1.9em]" src="./images/Inventories.webp"/>
+    <section className="overflow-hidden w-[100%]">
+      <img className="w-[100%] h-[18em] max-[600px]:py-[-1em] px-[2em]  absolute top-[-2em] left-[-1.9em]" src="./images/Inventories.webp"/>
          <section className="relative">
            <section className="flex items-center justify-center min-h-screen bg-gray-100">
             <Link className="absolute max-[600px]:top-[13em] top-[-1em] max-[600px]:left-[-2.5em] left-[-2em]" to="/"><GiExitDoor size={40} color={'#ff6e5a'} className="" /></Link>
