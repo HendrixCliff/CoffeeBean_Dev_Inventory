@@ -91,7 +91,7 @@ const handleLogout = () => {
 
      
       {user ? (
-        <section className="max-[600px]:ml-[1em]">
+        <section className="max-[600px]:mx-auto">
           <AddItemForm />
           {/* ConsumeItemForm and Delete buttons can go here too */}
         </section>
