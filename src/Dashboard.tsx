@@ -77,26 +77,27 @@ const handleLogout = () => {
       )}
     </section>
       </section>
-    <section className="fixed top-[10em] left-0 z-[999] flex flex-col gap-4 max-[600px]:pl-0 pl-2">
-  <Link to="filter">
-    <img className="w-[50px] hover:scale-105 transition-transform" src="./images/audit.png" alt="Audit" />
+   <section className="fixed top-[10em] left-0 z-[999] flex flex-col gap-4 p-0 m-0">
+  <Link to="filter" className="m-0 p-0">
+    <img className="w-[40px] max-[600px]:w-[35px] m-0 p-0" src="./images/audit.png" alt="Audit" />
   </Link>
-  <Link to="upload-receipt">
-    <img className="w-[50px] hover:scale-105 transition-transform" src="./images/receipt.png" alt="Upload Receipt" />
+  <Link to="upload-receipt" className="m-0 p-0">
+    <img className="w-[40px] max-[600px]:w-[35px] m-0 p-0" src="./images/receipt.png" alt="Upload Receipt" />
   </Link>
 </section>
+
 
       <h1>{user ? `Welcome ${user.name}` : 'Welcome to Inventory App'}</h1>
      
 
      
       {user ? (
-        <section className="max-[600px]:ml-auto">
+        <section className="">
           <AddItemForm />
           {/* ConsumeItemForm and Delete buttons can go here too */}
         </section>
       ) : (
-        <p className='max-[600px]:ml-[1em]'>Log in to manage your inventory!</p>
+        <p className=''>Log in to manage your inventory!</p>
       )}
      <section className="max-w-6xl mx-auto px-[.5em]">
        <ItemList items={itemsForDisplay} isDemo={!user} />
