@@ -15,7 +15,7 @@ const AddItemForm: React.FC = () => {
 
   const handleQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setQuantity(value ? parseInt(value) : 0);
+    setQuantity(parseInt(value));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
