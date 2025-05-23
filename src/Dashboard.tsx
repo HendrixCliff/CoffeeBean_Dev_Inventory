@@ -91,12 +91,12 @@ const handleLogout = () => {
 
      
       {user ? (
-        <section className="max-[600px]:mx-auto">
+        <section className="max-[600px]:ml-auto">
           <AddItemForm />
           {/* ConsumeItemForm and Delete buttons can go here too */}
         </section>
       ) : (
-        <p>Log in to manage your inventory!</p>
+        <p className='max-[600px]:ml-[1em]'>Log in to manage your inventory!</p>
       )}
      <section className="max-w-6xl mx-auto px-[.5em]">
        <ItemList items={itemsForDisplay} isDemo={!user} />
