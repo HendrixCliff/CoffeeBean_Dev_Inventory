@@ -91,10 +91,10 @@ const handleLogout = () => {
 
      
       {user ? (
-        <>
+        <section className="max-[600px]:ml-[1em]">
           <AddItemForm />
           {/* ConsumeItemForm and Delete buttons can go here too */}
-        </>
+        </section>
       ) : (
         <p>Log in to manage your inventory!</p>
       )}
