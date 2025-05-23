@@ -71,15 +71,21 @@ const handleLogout = () => {
       )}
     </section>
      <section className="">
-      <Link className="fixed top-[9em] left-[-4em] max-[600px]:left-[-14.5em] z-[999] " to="filter"><img className="w-[8%]" src="./images/audit.png"/></Link>
+      
       {user && (
         <button className="fixed w-[8%] bg-[#ffffff] border-[#ffffff] border max-[600px]:right-[1.4em] right-[1em]" onClick={handleLogout}><img className="w-[3em]" src="./images/user-logout.png"/></button>
       )}
     </section>
       </section>
-      <section className="gap-[1em]">
-        <Link className="fixed left-[-4em] top-[14em] z-[999] max-[600px]:left-[-14.5em]" to="upload-receipt"><img className="w-[8%]" src="./images/receipt.png"/></Link>
-      </section>
+    <section className="fixed top-[10em] left-0 z-[999] flex flex-col gap-4 pl-2">
+  <Link to="filter">
+    <img className="w-[50px] hover:scale-105 transition-transform" src="./images/audit.png" alt="Audit" />
+  </Link>
+  <Link to="upload-receipt">
+    <img className="w-[50px] hover:scale-105 transition-transform" src="./images/receipt.png" alt="Upload Receipt" />
+  </Link>
+</section>
+
       <h1>{user ? `Welcome ${user.name}` : 'Welcome to Inventory App'}</h1>
      
 
