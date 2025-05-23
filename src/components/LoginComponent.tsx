@@ -27,7 +27,7 @@ const Login: React.FC = () => {
   }, [user, navigate]);
 
   return (
-    <section className="overflow-hidden w-[100%]">
+    <section className="relative overflow-hidden w-[100%]">
       <img className="w-[100%] h-[18em] px-[2em]  absolute top-[-2em] left-[-1.9em]" src="./images/Inventories.webp"/>
          <section className=" relative">
            <section className="flex items-center justify-center min-h-screen bg-gray-100">

@@ -20,7 +20,7 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <section className="overflow-hidden w-[100%]">
+    <section className="relative overflow-hidden w-[100%]">
         <img className="w-[100%] h-[19em] px-[2em] absolute top-[-.001em] left-[-1.9em]" src="./images/Signup.webp"/>
         <section className="flex items-center justify-center min-h-screen bg-gray-100">
      <section className="relative">

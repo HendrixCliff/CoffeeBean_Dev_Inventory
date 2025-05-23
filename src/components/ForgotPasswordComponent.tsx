@@ -18,7 +18,7 @@ const ForgotPassword: React.FC = () => {
   };
 
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden">
       <img className="w-[100%] h-[24em] px-[2em] absolute top-[-2.4em] left-[-1.9em]" src="./images/Forgot_Password.webp"/>
           <section className="flex items-center justify-center min-h-screen bg-gray-100">
         <section className="relative">
