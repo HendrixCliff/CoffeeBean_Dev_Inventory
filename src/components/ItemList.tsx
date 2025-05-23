@@ -57,7 +57,7 @@ const ItemList: React.FC<Props> = ({ items, isDemo = false }) => {
   );
 
   return (
-    <div>
+    <section>
       {items.length === 0 && <p>No items to display</p>}
 
       <ul  className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
@@ -107,7 +107,7 @@ const ItemList: React.FC<Props> = ({ items, isDemo = false }) => {
               {item.image && (
                 <img
                   src={item.image}
-                  className="w-[8%] max-[600px]:w-[18%] mt-2"
+                  className="w-[8%] max-[600px]:w-[38%] mt-2"
                   alt={`${item.name} photo`}
                 />
               )}
@@ -148,7 +148,7 @@ const ItemList: React.FC<Props> = ({ items, isDemo = false }) => {
           </p>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 
