@@ -25,7 +25,7 @@ const ForgotPassword: React.FC = () => {
            <Link className="absolute max-[600px]:top-[-12.4em] bottom-[-7em] max-[600px]:left-[-3em] left-[1em]" to="/"><GiExitDoor size={36} color={'#2631ff'} className="" /></Link>
          </section>
       <section className="bg-white mt-[15em] p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-semibold mb-6 text-center">Forgot Password</h2>
+
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col">

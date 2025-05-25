@@ -45,7 +45,7 @@ const Login: React.FC = () => {
    </Link>
 </section>
       <section className="bg-white max-[600px]:mt-[-25em] mt-[-22em] p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-semibold mb-6 text-center text-blue-600">Login</h2>
+
       
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col">

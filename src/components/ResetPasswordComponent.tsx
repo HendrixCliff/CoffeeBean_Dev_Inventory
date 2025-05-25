@@ -35,7 +35,7 @@ const ResetPassword: React.FC = () => {
            <Link className="absolute max-[600px]:top-[5.4em] max-[600px]:left-[-.3em] top-[7em] left-[1em]" to="/"><GiExitDoor size={36} color={'#2631ff'} className="" /></Link>
         </section>
       <section className="bg-white p-8 mt-[22em] rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-2xl font-semibold mb-6 text-center">Reset Password</h2>
+
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col">
