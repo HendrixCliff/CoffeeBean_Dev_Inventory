@@ -22,7 +22,7 @@ const ForgotPassword: React.FC = () => {
       <img className="w-[100%] h-[24em] px-[2em] absolute top-[-2.4em] left-[-1.9em]" src="./images/Forgot_Password.webp"/>
           <section className="flex items-center justify-center min-h-screen bg-gray-100">
         <section className="relative">
-           <Link className="absolute max-[600px]:top-[-12.4em] bottom-[-7em] max-[600px]:left-[-3em] left-[1em]" to="/"><GiExitDoor size={36} color={'#2631ff'} className="" /></Link>
+           <Link className="absolute max-[600px]:top-[3em] bottom-[-7em] max-[600px]:left-[1em] left-[1em]" to="/"><GiExitDoor size={36} color={'#2631ff'} className="" /></Link>
          </section>
       <section className="bg-white mt-[15em] p-8 rounded-lg shadow-lg w-full max-w-md">
 
