@@ -21,10 +21,10 @@ const SignUp: React.FC = () => {
 
   return (
     <section className="relative overflow-hidden w-[100%]">
-        <img className="w-[100%] h-[19em] px-[2em] absolute top-[-.001em] left-[-1.9em]" src="./images/Signup.webp"/>
+        <img className="w-[100%] h-[19em] px-[2em] absolute top-[-2em] left-[-1.9em]" src="./images/Signup.webp"/>
         <section className="flex items-center justify-center min-h-screen bg-gray-100">
      <section className="relative">
-        <Link className="absolute w-[8em] max-[600px]:top-[-1.4em] top-[-2em] max-[600px]:left-[-3em] left-[-3em]" to="/"><GiExitDoor size={42} color={'#ff6e5a'} className="" /></Link>
+        <Link className="absolute w-[8em] max-[600px]:top-[-1.4em] top-[-2em] max-[600px]:left-[-3em] left-[-3em]" to="/"><GiExitDoor size={42} color={'##2631ff'} className="" /></Link>
       </section>
       <section className="bg-white mt-[12.5em] p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-semibold mb-6 text-center">Sign Up</h2>

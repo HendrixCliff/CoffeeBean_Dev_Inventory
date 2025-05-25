@@ -30,9 +30,20 @@ const Login: React.FC = () => {
     <section className="relative overflow-hidden w-[100%]">
       <img className="w-[100%] h-[18em] px-[2em]  absolute top-[-2em] left-[-1.9em]" src="./images/Inventories.webp"/>
          <section className=" relative">
-           <section className="flex items-center justify-center min-h-screen bg-gray-100">
-            <Link className="absolute max-[600px]:top-[3em] top-[-1em] max-[600px]:left-[-.5em] left-[-2em]" to="/"><GiExitDoor size={40} color={'#ff6e5a'} className="" /></Link>
-          </section>
+          <section className="flex items-center justify-center min-h-screen bg-gray-100 relative">
+    <Link
+      className="
+        absolute 
+        top-[2em] left-[2em] 
+        max-[600px]:top-[3em] 
+        max-[600px]:left-[1em] 
+        max-[600px]:-translate-x-1/2
+      "
+      to="/"
+    >
+    <GiExitDoor size={40} color="#2631ff" />
+   </Link>
+</section>
       <section className="bg-white max-[600px]:mt-[-25em] mt-[-22em] p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-semibold mb-6 text-center text-blue-600">Login</h2>
       

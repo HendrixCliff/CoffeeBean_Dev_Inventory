@@ -20,12 +20,12 @@ const AddItemForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    
     if (!name || quantity <= 0 || capitalPrice <= 0 || sellingPrice <= 0) {
       alert('Please fill in all required fields with valid values.');
       return;
     }
-
+   
     const formData = new FormData();
     formData.append('name', name);
     formData.append('category', category);

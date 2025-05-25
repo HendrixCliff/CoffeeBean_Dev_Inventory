@@ -32,7 +32,7 @@ const ResetPassword: React.FC = () => {
       <img className="w-[100%] h-[24em] px-[2em]  absolute top-[-.01em] left-[-1.9em]" src="/images/reset-password.webp"/>
        <section className="flex items-center justify-center min-h-screen bg-gray-100">
         <section className="relative">
-           <Link className="absolute max-[600px]:top-[5.4em] max-[600px]:left-[-.3em] top-[7em] left-[1em]" to="/"><GiExitDoor size={36} color={'#ff6e5a'} className="" /></Link>
+           <Link className="absolute max-[600px]:top-[5.4em] max-[600px]:left-[-.3em] top-[7em] left-[1em]" to="/"><GiExitDoor size={36} color={'#2631ff'} className="" /></Link>
         </section>
       <section className="bg-white p-8 mt-[22em] rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-semibold mb-6 text-center">Reset Password</h2>
