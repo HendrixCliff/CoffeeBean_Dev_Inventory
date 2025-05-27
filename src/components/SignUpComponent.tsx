@@ -17,7 +17,7 @@ const navigate = useNavigate();
 
   useEffect(() => {
     if (message === "Signup successful") {
-      navigate("/home");
+      navigate("/");
     }
   }, [message, navigate]);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
