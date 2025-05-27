@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useAppDispatch } from "../hooks/useAppDispatch";
 import { useAppSelector } from "../hooks/useAppSelector";
 import { signup } from "../redux/authSlice";
 import { GiExitDoor } from "react-icons/gi";
-import { Link} from "react-router-dom"
+import { Link, useNavigate} from "react-router-dom"
 
 const SignUp: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -13,7 +13,13 @@ const SignUp: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
+const navigate = useNavigate();
 
+  useEffect(() => {
+    if (message === "Signup successful") {
+      navigate("/home");
+    }
+  }, [message, navigate]);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(signup({ name, email, password, confirmPassword }));
